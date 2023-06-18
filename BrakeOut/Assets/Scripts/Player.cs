@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
         }
 
         Vector3 pos = this.transform.position;
-        pos.x = Mousepos3D.x;
+        //pos.x = Mousepos3D.x;
 
         if (pos.x < -LimitX) 
         {
