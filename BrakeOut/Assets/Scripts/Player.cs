@@ -4,19 +4,41 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    float Speed = 0.5f;
+    [SerializeField] public int LimitX = 24;
+    [SerializeField] public float PlayerSpeed = 66.6f;
+    Vector3 Mousepos2D;
+    Vector3 Mousepos3D;
 
-    void fixedUpdate()
+    void Update() 
     {
-        var Pos = transform.position;
-        if (Input.GetKey(KeyCode.RightArrow))
+        Mousepos2D = Input.mousePosition;
+        Mousepos2D.z = -Camera.main.transform.position.z;
+        Mousepos3D = Camera.main.ScreenToWorldPoint(Mousepos2D);
+
+        if (Input.GetKey(KeyCode.A)) 
         {
-            Pos.x += Speed;
+            transform.Translate(Vector3.up * PlayerSpeed *Time.deltaTime);  
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.D))
         {
-            Pos.x -= Speed;
+            transform.Translate(Vector3.down * PlayerSpeed * Time.deltaTime);
+
         }
-        transform.position = Pos;
+
+        Vector3 pos = this.transform.position;
+        pos.x = Mousepos3D.x;
+
+        if (pos.x < -LimitX) 
+        {
+            pos.x = -LimitX;
+
+        }
+        else if (pos.x > LimitX) 
+        {
+            pos.x = LimitX;
+        }
+        this.transform.position = pos;
+
     }
+
 }
