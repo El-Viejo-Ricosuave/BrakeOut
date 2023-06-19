@@ -30,7 +30,7 @@ public class Scores : MonoBehaviour
 
     void FixedUpdate() 
     {
-        HighscoreSO.Score += 5;
+        HighscoreSO.Score += 100;
     }
 
     void Update()
