@@ -4,26 +4,48 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] public int LimitX = 24;
+    [SerializeField] public float LimitX = 24.5F;
     [SerializeField] public float PlayerSpeed = 66.6f;
+
+    Transform transform;
     Vector3 Mousepos2D;
     Vector3 Mousepos3D;
 
+    void Start() 
+    {
+        transform = this.gameObject.transform;
+    }
+
+    private void OncollisionEnter(Collision collision) 
+    {
+        if (collision.gameObject.tag ==  "Bola")
+        {
+            Vector3 direction = collision.contacts[0].point - transform.position;
+            direction = direction.normalized;
+            collision.rigidbody.velocity = collision.gameObject.GetComponent<Ammo>().AmmoSpeed * direction;
+        }
+        
+    }
+
+
+
     void Update() 
     {
-        Mousepos2D = Input.mousePosition;
-        Mousepos2D.z = -Camera.main.transform.position.z;
-        Mousepos3D = Camera.main.ScreenToWorldPoint(Mousepos2D);
+        transform.Translate(Input.GetAxis("Horizontal") * Vector3.down * PlayerSpeed * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.A)) 
-        {
-            transform.Translate(Vector3.up * PlayerSpeed *Time.deltaTime);  
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(Vector3.down * PlayerSpeed * Time.deltaTime);
+        //Mousepos2D = Input.mousePosition;
+        //Mousepos2D.z = -Camera.main.transform.position.z;
+        //Mousepos3D = Camera.main.ScreenToWorldPoint(Mousepos2D);
 
-        }
+        //if (Input.GetKey(KeyCode.A)) 
+        //{
+        //    transform.Translate(Vector3.up * PlayerSpeed *Time.deltaTime);  
+        //}
+        //if (Input.GetKey(KeyCode.D))
+        //{
+        //    transform.Translate(Vector3.down * PlayerSpeed * Time.deltaTime);
+
+        //}
 
         Vector3 pos = this.transform.position;
         //pos.x = Mousepos3D.x;

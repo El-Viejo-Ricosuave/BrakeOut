@@ -6,7 +6,12 @@ public class WoodenTarget : Target
 {
     void Start()
     {
-        Durability = 2;
+        Durability = 1;
+    }
+
+    public override void BounceBall(Collision collision) 
+    {
+        base.BounceBall(collision);
     }
 
 }

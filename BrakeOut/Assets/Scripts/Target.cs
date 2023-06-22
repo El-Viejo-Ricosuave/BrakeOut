@@ -1,25 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Target : MonoBehaviour
 {
     public int Durability = 1;
-
-
-    // Start is called before the first frame update
-    void Start()
+    public UnityEvent Scoring;
+    
+    public void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Durability <= 0)
+        if (collision.gameObject.tag == "Ammo") 
         {
-            Destroy(this.gameObject);
+            BounceBall(collision);
         }
     }
+     
+
+    public virtual void BounceBall(Collision collision)
+    {
+        Vector3 direction = collision.contacts[0].point - transform.position;
+        direction = direction.normalized;
+        collision.rigidbody.velocity = collision.gameObject.GetComponent<Ammo>().AmmoSpeed * direction;
+        Durability--;
+    }
+
 
 }
