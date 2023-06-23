@@ -9,11 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1442455700455321973}
-  - component: {fileID: 1442455700455321970}
   - component: {fileID: 1442455700455321975}
   - component: {fileID: 1442455700455321974}
   - component: {fileID: 1442455700455321968}
   - component: {fileID: 1442455700455321969}
+  - component: {fileID: -457599691713466704}
   m_Layer: 0
   m_Name: Walnut
   m_TagString: Block
@@ -36,22 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1442455700455321970
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1442455700455321971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15d581ed5b79a3a43837e8a1f359e468, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Durability: 1
-  Scoring:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!23 &1442455700455321975
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -131,3 +115,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &-457599691713466704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1442455700455321971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7f7e26825b262489fb7fe5dbe316a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Durability: 1
+  Scoring:
+    m_PersistentCalls:
+      m_Calls: []

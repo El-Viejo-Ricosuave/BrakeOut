@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] public float LimitX = 24.5F;
+    [SerializeField] public float LimitX = 28.5f;
     [SerializeField] public float PlayerSpeed = 66.6f;
 
     Transform transform;
@@ -16,15 +16,19 @@ public class Player : MonoBehaviour
         transform = this.gameObject.transform;
     }
 
-    private void OncollisionEnter(Collision collision) 
+    public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag ==  "Bola")
+        if (collision.gameObject.tag == "Ammo")
         {
-            Vector3 direction = collision.contacts[0].point - transform.position;
-            direction = direction.normalized;
-            collision.rigidbody.velocity = collision.gameObject.GetComponent<Ammo>().AmmoSpeed * direction;
+            BounceBall(collision);
         }
-        
+    }
+
+    public virtual void BounceBall(Collision collision)
+    {
+        Vector3 direction = collision.contacts[0].point - transform.position;
+        direction = direction.normalized;
+        collision.rigidbody.velocity = collision.gameObject.GetComponent<Ammo>().AmmoSpeed * direction;
     }
 
 

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5227892570328838579}
   - component: {fileID: 5227892570328838580}
   - component: {fileID: 5227892570328838581}
-  - component: {fileID: 5227892570328838582}
+  - component: {fileID: 5257611800239891505}
   m_Layer: 0
   m_Name: Pine
   m_TagString: Block
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6fb0de5e475249c4aa6fc1ca10d4f1d5, type: 2}
+  - {fileID: 2100000, guid: ed4f30afaea54e94b9916ab8d8123dcf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &5227892570328838582
+--- !u!114 &5257611800239891505
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,7 +127,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d581ed5b79a3a43837e8a1f359e468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 1
-  Scoring:
-    m_PersistentCalls:
-      m_Calls: []

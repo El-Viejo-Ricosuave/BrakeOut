@@ -23,7 +23,7 @@ public class Ammo : MonoBehaviour
     {
         isGameStarted = false;
         Vector3 initialposition = GameObject.FindGameObjectWithTag("Player").transform.position;
-        initialposition.y += 2;
+        initialposition.y += 1.3f;
         this.transform.position = initialposition;
         this.transform.SetParent(GameObject.FindGameObjectWithTag("Player").transform);
         rigidbody = this.gameObject.GetComponent<Rigidbody>();
@@ -40,22 +40,10 @@ public class Ammo : MonoBehaviour
         {
             direction = transform.position - LastPosition;
             Debug.Log("Ammo Has touched the upper border");
-             direction.y *= -1;
+            direction.y *= -1;
             direction = direction.normalized;  
             rigidbody.velocity = AmmoSpeed * direction;
             control.OutUp = false;
-            control.enabled = false;
-            Invoke("EnableControl", 0.5f);
-        }
-
-        if (control.OutLeft)
-        {
-            direction = transform.position - LastPosition;
-            Debug.Log("Ammo Has touched the Left border");
-             direction.y *= -1;
-            direction = direction.normalized;
-            rigidbody.velocity = AmmoSpeed * direction;
-            control.OutLeft = false;
             control.enabled = false;
             Invoke("EnableControl", 0.5f);
         }
@@ -64,10 +52,22 @@ public class Ammo : MonoBehaviour
         {
             direction = transform.position - LastPosition;
             Debug.Log("Ammo Has touched the Right border");
-             direction.y *= -1;
+             direction.x *= -1;
             direction = direction.normalized;
             rigidbody.velocity = AmmoSpeed * direction;
             control.OutRight = false;
+            control.enabled = false;
+            Invoke("EnableControl", 0.5f);
+        }
+
+        if (control.OutLeft)
+        {
+            direction = transform.position - LastPosition;
+            Debug.Log("Ammo Has touched the Left border");
+             direction.x *= -1;
+            direction = direction.normalized;
+            rigidbody.velocity = AmmoSpeed * direction;
+            control.OutLeft = false;
             control.enabled = false;
             Invoke("EnableControl", 0.5f);
         }
