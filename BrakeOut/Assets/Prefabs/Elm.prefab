@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2611778256795583127}
   - component: {fileID: 2611778256795583120}
   - component: {fileID: 2611778256795583121}
-  - component: {fileID: 2611778256795583122}
+  - component: {fileID: 461550055251804541}
   m_Layer: 0
   m_Name: Elm
   m_TagString: Block
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6fb0de5e475249c4aa6fc1ca10d4f1d5, type: 2}
+  - {fileID: 2100000, guid: 5ea9776d4587a004bb77a020236601fb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &2611778256795583122
+--- !u!114 &461550055251804541
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,10 +124,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 2611778256795583123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15d581ed5b79a3a43837e8a1f359e468, type: 3}
+  m_Script: {fileID: 11500000, guid: cd2e200ed034db44fad0b6aa8d39888f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Durability: 1
-  Scoring:
-    m_PersistentCalls:
-      m_Calls: []

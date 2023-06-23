@@ -10,14 +10,14 @@ public class BorderControl : MonoBehaviour
 
     [Header("Dinamic Settings")]
     public bool OnScreen = true;
-    public float CameraWith;
+    public float CameraWidth;
     public float CameraHeight;
     public bool OutRight, OutLeft, OutUp,OutDown;
 
     public void Awake()
     {
         CameraHeight = Camera.main.orthographicSize;
-        CameraWith = Camera.main.aspect * CameraHeight;
+        CameraWidth = Camera.main.aspect * CameraHeight;
     }
 
     void LateUpdate()
@@ -25,19 +25,19 @@ public class BorderControl : MonoBehaviour
         Vector3 pos = transform.position;
         OnScreen = true;
         OutDown = OutUp = OutRight = OutLeft = false;
-        if (pos.x > CameraWith - radio) 
+        if (pos.x > CameraWidth - radio) 
         {
-            pos.x = CameraWith - radio;
+            pos.x = CameraWidth - radio;
             OutRight = true;
         }
-        if (pos.x < -CameraWith + radio) 
+        if (pos.x < -CameraWidth + radio) 
         {
-            pos.x = -CameraWith + radio;
+            pos.x = -CameraWidth + radio;
             OutLeft = true; 
         }
         if (pos.y > CameraHeight - radio) 
         {
-            pos.y = CameraHeight - radio;
+            pos.y = CameraWidth - radio;
             OutUp = true;
         }  
         if(pos.y < -CameraHeight + radio) 
@@ -55,9 +55,9 @@ public class BorderControl : MonoBehaviour
     }
     private void OnDrawGizmos() 
     {
-        if (Application.isPlaying) return;
-        Vector3 Bordersize = new Vector3(CameraWith * 2, CameraHeight * 2, 0.1f);
-        Gizmos.DrawWireCube(Vector3.zero, Bordersize); 
+        if (!Application.isPlaying) return;
+        Vector3 BorderSize = new Vector3(CameraWidth * 2, CameraHeight * 2, 0.1f);
+        Gizmos.DrawWireCube(Vector3.zero, BorderSize); 
     }
       
 

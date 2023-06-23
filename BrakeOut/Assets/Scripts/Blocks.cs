@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Target : MonoBehaviour
+public class Blocks : MonoBehaviour
 {
     public int Durability = 1;
     public UnityEvent Scoring;
-    
+
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Ammo") 
@@ -15,7 +15,6 @@ public class Target : MonoBehaviour
             BounceBall(collision);
         }
     }
-     
 
     public virtual void BounceBall(Collision collision)
     {
@@ -25,5 +24,13 @@ public class Target : MonoBehaviour
         Durability--;
     }
 
+    void Update()
+    {
+        if (Durability <= 0)
+        {
+            Scoring.Invoke();
+            Destroy(this.gameObject);
+        }
+    }
 
 }

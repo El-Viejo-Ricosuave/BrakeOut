@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MetalTarget : Target
+public class ElmBlock : Blocks
 {
-    // Start is called before the first frame update
     void Start()
     {
-        Durability = 6;
+        Durability = 4;
     }
 
 }
