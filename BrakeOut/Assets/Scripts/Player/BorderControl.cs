@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BorderControl : MonoBehaviour
 {
-    [Header("Configure in editor")]
+    [Header("Configure in Editor")]
     public float radio = 1f;
     public bool KeepOnScreen = false;
 

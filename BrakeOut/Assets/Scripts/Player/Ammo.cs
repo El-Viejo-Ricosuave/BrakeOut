@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class Ammo : MonoBehaviour
 {
-    bool isGameStarted = false;
+    bool isGameStarted;
     [SerializeField] public float AmmoSpeed = 22.2f;
     Vector3 LastPosition = Vector3.zero;
     Vector3 direction = Vector3.zero;

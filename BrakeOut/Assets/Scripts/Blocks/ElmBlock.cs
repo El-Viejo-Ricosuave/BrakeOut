@@ -6,7 +6,7 @@ public class ElmBlock : Blocks
 {
     void Start()
     {
-        Durability = 4;
+        Durability = 2;
     }
 
 }
