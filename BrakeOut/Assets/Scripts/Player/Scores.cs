@@ -28,11 +28,6 @@ public class Scores : MonoBehaviour
         HighscoreSO.Score = 0;
     }
 
-    void FixedUpdate() 
-    {
-        HighscoreSO.Score += 100;
-    }
-
     void Update()
     {
         Scoretext.text = $"Score: {HighscoreSO.Score}";
@@ -43,4 +38,10 @@ public class Scores : MonoBehaviour
             HighscoreSO.Save();
         }
     }
+
+    public void AddPoints(int points) 
+    {
+        HighscoreSO.Score += points;
+    }
+
 }

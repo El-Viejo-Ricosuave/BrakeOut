@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalnutBlock : Blocks
+public class OakBlock : Blocks
 {
     void Start()
     {
-        Durability = 6;
+        Durability = 2;
     }
 
 }
