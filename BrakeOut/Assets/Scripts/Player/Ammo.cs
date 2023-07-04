@@ -23,7 +23,7 @@ public class Ammo : MonoBehaviour
     {
         isGameStarted = false;
         Vector3 initialposition = GameObject.FindGameObjectWithTag("Player").transform.position;
-        initialposition.y += 2f;
+        initialposition.y += 3f;
         this.transform.position = initialposition;
         this.transform.SetParent(GameObject.FindGameObjectWithTag("Player").transform);
         rigidbody = this.gameObject.GetComponent<Rigidbody>();
