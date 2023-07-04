@@ -16,6 +16,7 @@ public class Lives : MonoBehaviour
         {
             lives.Add(Son.gameObject);
         }
+        lives.Remove(this.gameObject);
     }
 
     public void RemoveLifeBar () 
