@@ -6,7 +6,7 @@ public class MahoganyBlock : Blocks
 {
     void Start()
     {
-        Durability = 2;
+        Durability = 1;
     }
 
 }

@@ -8,15 +8,19 @@ public class PauseMenu : MonoBehaviour
     public GameObject Pause;
     public GameObject Settings;
 
+
+
     public void ShowPauseMenu() 
     {
         Pause.SetActive(true);
         if (Pause.activeInHierarchy) Settings.SetActive(false);
+        Time.timeScale = 0f;
     }
 
     public void HidePauseMenu() 
     {
         Pause.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     public void BackToTitleScreen() 

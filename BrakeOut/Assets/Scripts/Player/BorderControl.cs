@@ -37,12 +37,13 @@ public class BorderControl : MonoBehaviour
         }
         if (pos.y > CameraHeight - radio) 
         {
-            pos.y = CameraWidth - radio;
+            pos.y = CameraHeight - radio;
             OutUp = true;
         }  
         if(pos.y < -CameraHeight + radio) 
         { 
             pos.y = -CameraHeight + radio;
+            OutDown=true;
         }
 
         OnScreen =!(OutDown||OutUp||OutLeft||OutRight);
