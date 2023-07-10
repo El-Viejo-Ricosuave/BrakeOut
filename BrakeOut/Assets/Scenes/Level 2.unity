@@ -2700,8 +2700,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+      - m_Target: {fileID: 911043793}
+        m_TargetAssemblyTypeName: NextLevel, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 1
         m_Arguments:
@@ -7413,7 +7413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7c9afef6274ec468263f4b31c003f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Settings: {fileID: 0}
+  Settings: {fileID: 743663371}
   TitleScreen: {fileID: 0}
 --- !u!114 &911043792
 MonoBehaviour:
@@ -7427,8 +7427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d705e29b97f7824ea3d8c6bd234f654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause: {fileID: 0}
-  Settings: {fileID: 0}
+  Pause: {fileID: 350903961}
+  Settings: {fileID: 743663371}
 --- !u!114 &911043793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8553,7 +8553,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44b7181276014f4ca34be6c5ca8cd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelEndMenu: {fileID: 0}
+  LevelEndMenu: {fileID: 496449944}
 --- !u!1001 &1031513862
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9206,7 +9206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: []
   AmmoPrefab: {fileID: 1011525735962721654, guid: b537f2891236fc44c86ccbf6650d6593, type: 3}
-  GameOver: {fileID: 0}
+  GameOver: {fileID: 2048997491}
 --- !u!1 &1131346110
 GameObject:
   m_ObjectHideFlags: 0
@@ -10557,7 +10557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ObjectToSave:
-  - {fileID: 11400000, guid: 637f0d4b589cc7f40bcffa820a128396, type: 2}
+  - {fileID: 11400000, guid: 716935ff82c4a7f46ad668be8061030d, type: 2}
 --- !u!4 &1397153848
 Transform:
   m_ObjectHideFlags: 0
@@ -11533,6 +11533,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ammo
       objectReference: {fileID: 0}
+    - target: {fileID: 3682734588633154881, guid: b537f2891236fc44c86ccbf6650d6593, type: 3}
+      propertyPath: options_SO
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d29726708225f14eaa80bde55fa8d8b, type: 2}
     - target: {fileID: 3682734588633154881, guid: b537f2891236fc44c86ccbf6650d6593, type: 3}
       propertyPath: DestroyedAmmo.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -14143,8 +14147,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: GameOver, Assembly-CSharp
+      - m_Target: {fileID: 911043793}
+        m_TargetAssemblyTypeName: NextLevel, Assembly-CSharp
         m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:

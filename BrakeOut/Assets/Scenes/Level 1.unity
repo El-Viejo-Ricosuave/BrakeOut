@@ -16853,8 +16853,16 @@ PrefabInstance:
       value: Ammo
       objectReference: {fileID: 0}
     - target: {fileID: 3682734588633154881, guid: b537f2891236fc44c86ccbf6650d6593, type: 3}
+      propertyPath: options_SO
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d29726708225f14eaa80bde55fa8d8b, type: 2}
+    - target: {fileID: 3682734588633154881, guid: b537f2891236fc44c86ccbf6650d6593, type: 3}
       propertyPath: DestroyedAmmo.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 119733454}
+    - target: {fileID: 3682734588633154881, guid: b537f2891236fc44c86ccbf6650d6593, type: 3}
+      propertyPath: DestroyedAmmo.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RemoveLifeBar
       objectReference: {fileID: 0}
     - target: {fileID: 3807126559447612056, guid: b537f2891236fc44c86ccbf6650d6593, type: 3}
       propertyPath: m_RootOrder

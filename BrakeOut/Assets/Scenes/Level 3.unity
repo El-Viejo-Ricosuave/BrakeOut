@@ -6459,7 +6459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d44b7181276014f4ca34be6c5ca8cd37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelEndMenu: {fileID: 0}
+  LevelEndMenu: {fileID: 775408944}
 --- !u!1 &1017526129
 GameObject:
   m_ObjectHideFlags: 0
