@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] public float LimitX = 28.5f;
     [SerializeField] public float PlayerSpeed = 66.6f;
+    public Options options_SO;
 
     Transform transform;
     Vector3 Mousepos2D;

@@ -18,7 +18,7 @@ public class Speed : MonoBehaviour
 
     public void ControlChanges() 
     {
-        options.Playerspeed((int)(slider.value));
+        options.ChangeSpeed((int)(slider.value));
     }
    
 }

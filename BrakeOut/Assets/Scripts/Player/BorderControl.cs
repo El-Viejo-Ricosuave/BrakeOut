@@ -8,6 +8,7 @@ public class BorderControl : MonoBehaviour
     public float radio = 1f;
     public bool KeepOnScreen = false;
 
+
     [Header("Dinamic Settings")]
     public bool OnScreen = true;
     public float CameraWidth;

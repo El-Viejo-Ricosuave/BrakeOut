@@ -13,6 +13,8 @@ public class Ammo : MonoBehaviour
     Rigidbody rigidbody;
     private BorderControl control;
     public UnityEvent DestroyedAmmo;
+    public Options options_SO;
+
 
     private void Awake() 
     {
