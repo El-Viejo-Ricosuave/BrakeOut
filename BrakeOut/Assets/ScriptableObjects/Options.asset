@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e42701034c4cca4da86d15057d512f4, type: 3}
   m_Name: Options
   m_EditorClassIdentifier: 
-  Ammospeed: 50
-  Difficultylevel: 0
-  PlayerSpeed: 43
+  AmmoSpeed: 30
+  Difficultylevel: 2

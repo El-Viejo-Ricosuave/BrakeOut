@@ -13,6 +13,8 @@ public class Ammo : MonoBehaviour
     Rigidbody rigidbody;
     private BorderControl control;
     public UnityEvent DestroyedAmmo;
+    public Options options_SO;
+
 
     private void Awake() 
     {
@@ -23,7 +25,7 @@ public class Ammo : MonoBehaviour
     {
         isGameStarted = false;
         Vector3 initialposition = GameObject.FindGameObjectWithTag("Player").transform.position;
-        initialposition.y += 3f;
+        initialposition.y += 2f;
         this.transform.position = initialposition;
         this.transform.SetParent(GameObject.FindGameObjectWithTag("Player").transform);
         rigidbody = this.gameObject.GetComponent<Rigidbody>();
@@ -45,7 +47,7 @@ public class Ammo : MonoBehaviour
             rigidbody.velocity = AmmoSpeed * direction;
             control.OutUp = false;
             control.enabled = false;
-            Invoke("EnableControl", 0.5f);
+            Invoke("EnableControl", 0.1f);
         }
 
         if (control.OutRight)
@@ -57,7 +59,7 @@ public class Ammo : MonoBehaviour
             rigidbody.velocity = AmmoSpeed * direction;
             control.OutRight = false;
             control.enabled = false;
-            Invoke("EnableControl", 0.5f);
+            Invoke("EnableControl", 0.1f);
         }
 
         if (control.OutLeft)
@@ -69,7 +71,7 @@ public class Ammo : MonoBehaviour
             rigidbody.velocity = AmmoSpeed * direction;
             control.OutLeft = false;
             control.enabled = false;
-            Invoke("EnableControl", 0.5f);
+            Invoke("EnableControl", 0.1f);
         }
 
         if (Input.GetKey(KeyCode.Space) ||Input.GetButton("Submit")) 

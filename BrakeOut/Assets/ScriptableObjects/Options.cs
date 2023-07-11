@@ -6,16 +6,16 @@ using UnityEngine;
 
 public class Options : ScriptableObject
 {
-    public float Ammospeed = 30;
+    public float AmmoSpeed = 30;
     public difficulty Difficultylevel = difficulty.easy;
-    public int PlayerSpeed = 10;
+
 
     public enum difficulty { easy, medium, hard}
    
 
     public void ChangeSpeed(float newSpeed) 
     {
-        Ammospeed = newSpeed;
+        AmmoSpeed = newSpeed;
     }
 
     public void ChangeDifficulty(int newDifficulty) 
@@ -23,10 +23,5 @@ public class Options : ScriptableObject
         Difficultylevel = (difficulty)newDifficulty;
     }
 
-    public void Playerspeed(int newSpeed) 
-    {
-
-        PlayerSpeed = newSpeed; 
-    }
 
 }
