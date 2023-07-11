@@ -7849,7 +7849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: []
   AmmoPrefab: {fileID: 1011525735962721654, guid: b537f2891236fc44c86ccbf6650d6593, type: 3}
-  GameOver: {fileID: 0}
+  GameOver: {fileID: 486526424}
 --- !u!1001 &1144467228
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8728,9 +8728,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1418908279}
         m_TargetAssemblyTypeName: NextLevel, Assembly-CSharp
-        m_MethodName: Nextlevel
+        m_MethodName: LoadMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9055,8 +9055,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d705e29b97f7824ea3d8c6bd234f654, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pause: {fileID: 0}
-  Settings: {fileID: 0}
+  Pause: {fileID: 1008034875}
+  Settings: {fileID: 376087254}
 --- !u!114 &1418908281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9069,7 +9069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7c9afef6274ec468263f4b31c003f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Settings: {fileID: 0}
+  Settings: {fileID: 376087254}
   TitleScreen: {fileID: 0}
 --- !u!114 &1418908282
 MonoBehaviour:
@@ -11558,7 +11558,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1418908280}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: ShowPauseMenu
         m_Mode: 1
@@ -12424,7 +12424,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1418908279}
         m_TargetAssemblyTypeName: NextLevel, Assembly-CSharp
         m_MethodName: LoadMainMenu
         m_Mode: 1
