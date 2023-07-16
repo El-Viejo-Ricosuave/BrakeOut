@@ -9376,7 +9376,7 @@ MonoBehaviour:
   transformScore: {fileID: 0}
   Highscoretext: {fileID: 0}
   Scoretext: {fileID: 0}
-  HighscoreSO: {fileID: 11400000, guid: 0ee7dea4452d46746ba09c3fd8ac83e5, type: 2}
+  HighscoreSO: {fileID: 11400000, guid: 716935ff82c4a7f46ad668be8061030d, type: 2}
 --- !u!81 &1418908283
 AudioListener:
   m_ObjectHideFlags: 0

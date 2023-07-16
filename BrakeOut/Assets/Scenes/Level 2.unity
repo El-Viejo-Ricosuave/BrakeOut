@@ -7400,7 +7400,7 @@ MonoBehaviour:
   transformScore: {fileID: 0}
   Highscoretext: {fileID: 0}
   Scoretext: {fileID: 0}
-  HighscoreSO: {fileID: 11400000, guid: 0ee7dea4452d46746ba09c3fd8ac83e5, type: 2}
+  HighscoreSO: {fileID: 11400000, guid: 637f0d4b589cc7f40bcffa820a128396, type: 2}
 --- !u!114 &911043791
 MonoBehaviour:
   m_ObjectHideFlags: 0
