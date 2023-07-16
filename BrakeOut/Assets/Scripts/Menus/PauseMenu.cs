@@ -26,12 +26,14 @@ public class PauseMenu : MonoBehaviour
     public void BackToTitleScreen() 
     {
         SceneManager.LoadScene(0);
+        Time.timeScale = 1f;
     }
 
     public void ShowSettings() 
     {
         Pause.SetActive(false);
         Settings.SetActive(true);
+        Time.timeScale = 1f;
     }
 
 
