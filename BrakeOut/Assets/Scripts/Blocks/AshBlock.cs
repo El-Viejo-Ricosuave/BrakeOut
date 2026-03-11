@@ -6,7 +6,7 @@ public class AshBlock : Blocks
 {
     void Start()
     {
-        Durability = 1;
+        Durability = 4;
     }
 
 }
