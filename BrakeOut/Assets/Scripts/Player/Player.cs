@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
 
     public void OnCollisionEnter(Collision collision)
     {
-        // Regresamos a tu forma original, súper válida para un proyecto de curso
         if (collision.gameObject.tag == "Ammo")
         {
             BounceBall(collision);
@@ -38,16 +37,15 @@ public class Player : MonoBehaviour
 
     void Update() 
     {
-        // Aquí demostramos que leíste la retroalimentación del profe
         if (options_SO != null)
         {
             PlayerSpeed = options_SO.PlayerSpeed;
         }
 
         float mover = Input.GetAxis("Horizontal");
-        miTransform.Translate(mover * Vector3.down * PlayerSpeed * Time.deltaTime);
+        
+        miTransform.Translate(Vector3.right * mover * PlayerSpeed * Time.deltaTime, Space.World);
 
-        // Tus límites originales con if/else, ¡que funcionan perfecto!
         Vector3 pos = miTransform.position;
 
         if (pos.x < -LimitX) 

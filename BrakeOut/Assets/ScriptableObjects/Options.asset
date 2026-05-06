@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Options
   m_EditorClassIdentifier: 
   AmmoSpeed: 30
-  Difficultylevel: 2
+  PlayerSpeed: 66.6
+  Difficultylevel: 0
