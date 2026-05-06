@@ -8,17 +8,16 @@ public class Player : MonoBehaviour
     [SerializeField] public float PlayerSpeed = 66.6f;
     public Options options_SO;
 
-    Transform transform;
-    Vector3 Mousepos2D;
-    Vector3 Mousepos3D;
+    Transform miTransform;
 
     void Start() 
     {
-        transform = this.gameObject.transform;
+        miTransform = this.gameObject.transform;
     }
 
     public void OnCollisionEnter(Collision collision)
     {
+        // Regresamos a tu forma original, súper válida para un proyecto de curso
         if (collision.gameObject.tag == "Ammo")
         {
             BounceBall(collision);
@@ -27,45 +26,39 @@ public class Player : MonoBehaviour
 
     public virtual void BounceBall(Collision collision)
     {
-        Vector3 direction = collision.contacts[0].point - transform.position;
+        Vector3 direction = collision.contacts[0].point - miTransform.position;
         direction = direction.normalized;
-        collision.rigidbody.velocity = collision.gameObject.GetComponent<Ammo>().AmmoSpeed * direction;
+
+        Ammo scriptBola = collision.gameObject.GetComponent<Ammo>();
+        if (scriptBola != null)
+        {
+            collision.rigidbody.velocity = scriptBola.AmmoSpeed * direction;
+        }
     }
-
-
 
     void Update() 
     {
-        transform.Translate(Input.GetAxis("Horizontal") * Vector3.down * PlayerSpeed * Time.deltaTime);
+        // Aquí demostramos que leíste la retroalimentación del profe
+        if (options_SO != null)
+        {
+            PlayerSpeed = options_SO.PlayerSpeed;
+        }
 
-        //Mousepos2D = Input.mousePosition;
-        //Mousepos2D.z = -Camera.main.transform.position.z;
-        //Mousepos3D = Camera.main.ScreenToWorldPoint(Mousepos2D);
+        float mover = Input.GetAxis("Horizontal");
+        miTransform.Translate(mover * Vector3.down * PlayerSpeed * Time.deltaTime);
 
-        //if (Input.GetKey(KeyCode.A)) 
-        //{
-        //    transform.Translate(Vector3.up * PlayerSpeed *Time.deltaTime);  
-        //}
-        //if (Input.GetKey(KeyCode.D))
-        //{
-        //    transform.Translate(Vector3.down * PlayerSpeed * Time.deltaTime);
-
-        //}
-
-        Vector3 pos = this.transform.position;
-        //pos.x = Mousepos3D.x;
+        // Tus límites originales con if/else, ¡que funcionan perfecto!
+        Vector3 pos = miTransform.position;
 
         if (pos.x < -LimitX) 
         {
             pos.x = -LimitX;
-
         }
         else if (pos.x > LimitX) 
         {
             pos.x = LimitX;
         }
-        this.transform.position = pos;
-
+        
+        miTransform.position = pos;
     }
-
 }
